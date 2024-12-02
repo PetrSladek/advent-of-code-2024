@@ -5,8 +5,8 @@ while($line = $file->fgets())
 {
 	$values = explode("  ", trim($line));
 
-	$list1[] = $values[0];
-	$list2[] = $values[1];
+	$list1[] = (int) $values[0];
+	$list2[] = (int) $values[1];
 }
 
 
@@ -30,7 +30,7 @@ foreach ($list1 as $value)
 	$count = 0;
 	foreach ($list2 as $value2)
 	{
-		if ($value2 == $value)
+		if ($value2 === $value)
 		{
 			$count++;
 		}
